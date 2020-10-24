@@ -1,3 +1,56 @@
 body{
-    background-color: coral;
+    background-color: rgb(241, 227, 143);
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+.add-burger-button{
+    background-color: cornflowerblue;
+}
+.eat-ate-container{
+    display: inline-block;
+    text-align: center;
+    right: 50%;
+    margin: auto;
+
+    
+}
+.eat{
+    float: left;
+    right: 40%;
+}
+#eat-item{
+    background-color: honeydew;
+    margin: 10px;
+    padding: 17px;
+
+}
+.ate{
+    float: left;
+}
+#ate-item{
+    background-color: honeydew;
+    color:lightskyblue;
+    padding-left: 17px;
+
+}
+.new-burger-form{
+    text-align: center;
+}
+.new-burger-form h2{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+.new-burger-form label{
+    display: inline-block;
+}
+.new-burger-form p{
+    color: darkblue;
+}
+img{
+    height: 100px;
+    width: 100px;
 }
