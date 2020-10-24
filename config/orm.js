@@ -22,11 +22,10 @@ function objToSql(ob) {
         if (typeof value === "string" && value.indexOf(" ") >= 0) {
           value = "'" + value + "'";
         }
-        // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-        // e.g. {sleepy: true} => ["sleepy=true"]
         arr.push(key + "=" + value);
       }
     }
+    return arr;
 };
 var orm = {
     selectAll: function(tableInput, cb) {
@@ -61,7 +60,8 @@ var orm = {
     // An example of objColVals would be {name: panther, sleepy: true}
     updateOne: function(table, objColVals, condition, cb) {
       var queryString = "UPDATE " + table;
-  
+      // console.log(objColVals);
+      // console.log(objToSql(objColVals));
       queryString += " SET ";
       queryString += objToSql(objColVals);
       queryString += " WHERE ";
@@ -78,5 +78,4 @@ var orm = {
     }
   };
   
-  // Export the orm object for the model (cat.js).
   module.exports = orm;
